@@ -869,6 +869,13 @@ gb_global TargetMetrics target_freestanding_amd64_mingw = {
 	TargetABI_Win64,
 };
 
+gb_global TargetMetrics target_freestanding_i386 = {
+	TargetOs_freestanding,
+	TargetArch_i386,
+	4, 4, I386_MAX_ALIGNMENT, 16,
+	str_lit("i386-unknown-elf"),
+};
+
 
 gb_global TargetMetrics target_freestanding_arm64 = {
 	TargetOs_freestanding,
@@ -930,6 +937,7 @@ gb_global NamedTargetMetrics named_targets[] = {
 	{ str_lit("freestanding_amd64_sysv"),  &target_freestanding_amd64_sysv },
 	{ str_lit("freestanding_amd64_win64"), &target_freestanding_amd64_win64 },
 	{ str_lit("freestanding_amd64_mingw"), &target_freestanding_amd64_mingw },
+	{ str_lit("freestanding_i386"), &target_freestanding_i386 },
 
 	{ str_lit("freestanding_arm64"), &target_freestanding_arm64 },
 	{ str_lit("freestanding_arm32"), &target_freestanding_arm32 },
